@@ -20,7 +20,7 @@
 |name|string|index:true,null:false,unique:true|
 
 ### Association
-- has_many :group_user
+- has_many :group_users
 - has_many :user,through::group_users
 - has_many :messages
 
