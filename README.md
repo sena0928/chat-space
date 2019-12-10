@@ -28,10 +28,10 @@
 # messages_table
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null:false|
+|body|text|
 |image|string|
-|group|references|foreign_key: true|
-|user|references|foreign_key: true|
+|group|references|foreign_key: true,null:false|
+|user|references|foreign_key: true,null:false|
 
 ### Association
 - belongs_to :group
@@ -40,8 +40,8 @@
 # groups_users_table
 |Column|Type|Options|
 |------|----|-------|
-|group|references|index: true, foreign_key: true,null:false|
-|user|references|null: true, foreign_key: true,null:false|
+|group|references|foreign_key: true,null:false|
+|user|references|foreign_key: true,null:false|
 
 ### Association
 - belongs_to :group
